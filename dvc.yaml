@@ -1,0 +1,11 @@
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/
+    outs:
+      - models/
+    metrics:
+      - results/metrics.json:
+          cache: false

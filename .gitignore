@@ -1,1 +1,63 @@
 /data
+# =========================
+# Python & Environment
+# =========================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# MLOps & Tracking
+# =========================
+# MLflow local tracking directories
+mlruns/
+mlartifacts/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# DVC - (Note: DVC automatically manages its own ignore rules for your data/ folder)
+# We still ignore local DVC configs so paths don't conflict across machines
+.dvc/config.local
+.dvc/tmp/
+.dvc/cache/
+
+# =========================
+# Data & Artifacts
+# =========================
+# Ignore local secrets and credentials
+*.env
+credentials.yaml
+credentials.yaml.gpg
+
+# Explicitly ignore heavy models or data just in case DVC misses them
+*.mat
+*.csv
+*.h5
+*.pkl
+*.pt
+*.pth
+
+# =========================
+# Testing & Code Quality
+# =========================
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# =========================
+# IDE & OS Files
+# =========================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
